@@ -1,0 +1,263 @@
+#kontaktipalkki {
+    font: 12px Arial, sans-serif;
+    background-color: #161616b7;
+}
+#kontaktipalkki a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #ff8c00;
+}
+#kontaktipalkki a:hover {
+    text-decoration: none;
+    font-weight: bolder;
+    color: #fff;
+}
+#yla_tausta {
+    background-image: url("tausta.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#ala_tausta {
+    background-image: linear-gradient(to bottom right, #ff8c00, #7c7c7c);
+    height: 15vw;
+    min-height: 200px;
+    color: #fff;
+}
+#logo {
+    height: 15vw;
+    min-height: 200px;
+    color: #fff;
+}
+#logo_tausta {
+    background-color: #11111175;
+    text-align: center;
+}
+#navi {
+    background-color: #ff8c0098;
+}
+#navi ul {
+    list-style-type: none;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+#navi li {
+    float: left;
+}
+#navi li a {
+    padding: 10px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+}
+#navi li a:hover {
+    background-color: #ff8c00d2;
+    color: #000000;
+}
+#navi li a.aktiivi {
+    background-color: #ffffff;
+    color: #000000;
+}
+.kuva {
+    padding: 5px;
+    margin: 0px 10px;
+    height: auto;
+    width: 45%;
+    position: relative;
+}
+.galleria {
+    overflow: hidden;
+}
+.galleria img:hover {
+    transform: scale(2.0);
+}
+.galleria img {
+    width: 100%;
+    height: auto;
+    transition: 0.5s all ease-in-out;
+    backface-visibility: hidden;
+}
+.selitys {
+    background-color: #2b7394;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 16px 32px;
+    margin-top: 5px;
+}
+.muuttuvakuva {
+    padding: 0;
+    display: block;
+    overflow: hidden;
+    width: 100%;
+}
+#sitaatit_logo {
+    font-style: italic;
+    text-align: right;
+    color: #ff8c00;
+}
+#sitaatit_sivu {
+    font-style: italic;
+    text-align: left;
+    color: #ff8c00;
+    display: none;
+}
+span.sitaatti::before {
+    content: "Suomen paras näkemys seinistä ja niiden rakenteesta";
+    color: #ffffff;
+    animation: vaihtoteksti infinite 10s;
+}
+.otsikko {
+    background-image: linear-gradient(to right, #575757 , #7c7c7c);
+    color: #dbdbdb;
+    height: 100%;
+    padding: 50px;
+}
+.tuotekuva {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+.tuotekategoria {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%)
+}
+.kuva:hover .tuotekuva {
+    opacity: 0.3;
+}
+.kuva:hover .tuotekategoria {
+    opacity: 1;
+}
+.selitys a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #cacaca;
+}
+.selitys a:hover {
+    text-decoration: none;
+    font-weight: bolder;
+    color: #ff8c00;
+}
+.esittely {
+    width: 33.333333%;
+    padding: 0 6px;
+    float: left;
+}
+.yhteyslomake {
+    width: 50%;
+}
+.toimidiv {
+    position: relative;
+    width: 60%;
+    padding: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.toimidiv img:hover {
+    filter: blur(1px);
+}
+.toimiteksti {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 18px;
+    background-color: #ffffffa4;
+    padding: 5px;
+    margin: 0;
+    font-weight: bolder;
+    width: 100%;
+    text-align: right;
+    border-radius: 0px 5px 5px 0px;
+}
+
+@keyframes vaihtoteksti {
+    25% {
+        content: "Alituisesti paras asiakaspalvelu seiniin liittyen";
+    }
+    50% {
+        content: "Parasta seinäkonsultaatiota!";
+    }
+    75% {
+        content: "Mä niin rakastan seiniä...";
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    #sitaatit_logo {
+        max-width: 200px;
+    }
+    #logo_tausta {
+        height: 150px;
+    }
+    .kuva {
+        width: 65%;
+        margin: 5px;
+    }
+    .esittely {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+}
+@media only screen and (max-width: 1300px) {
+    .yhteyslomake {
+        width: 75%;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .kuva {
+        width: 50%;
+        margin: 5px;
+    }
+    #sitaatit_logo {
+        display: none;
+    }
+    #sitaatit_sivu {
+        display: block;
+        width: 100%;
+        background-color: #747474;
+    }
+    span.sitaatti {
+        color: #161616;
+    }
+    .otsikko {
+        padding: 10px;
+    }
+    .otsikko h5 {
+        font-size: 14px;
+        font-weight: bold;
+    }
+    .otsikko b {
+        font-size: 12px;
+    }
+    .esittely {
+        width: 100%;
+    }
+    .yhteyslomake {
+        width: 100%;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+a {
+    transition: 0.4s;
+}
+label {
+    padding-top: 5px;
+}
+textarea {
+    resize: none;
+}
